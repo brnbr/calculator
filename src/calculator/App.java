@@ -12,6 +12,9 @@ public class App {
         List<Integer> calres = new ArrayList<>();
         int result = 0;
         int cnt = 0;
+        int num1;
+        int num2;
+        char calSym;
 
         String exit = "";  //종료
         String remv = "";  //맨 앞 결과 삭제
@@ -21,14 +24,14 @@ public class App {
         while (true) {
             //숫자 입력 받기
             System.out.println("첫 번째 숫자를 입력하세요: ");
-            int num1 = scan.nextInt();
+            num1 = scan.nextInt();
 
             System.out.println("두 번째 숫자를 입력하세요: ");
-            int num2 = scan.nextInt();
+            num2 = scan.nextInt();
 
             //사칙연산 기호 입력받기
             System.out.println("사칙연산 기호를 입력하세요: ");
-            char calSym = scan.next().charAt(0);
+            calSym = scan.next().charAt(0);
 
             //계산
             if (calSym == '+') {
