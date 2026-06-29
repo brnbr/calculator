@@ -5,6 +5,7 @@ public class ArithmaticCalculator extends Calculator{
     private final SubtractOperator sub = new SubtractOperator();
     private final MultiplyOperator mul = new MultiplyOperator();
     private final DivideOperator div = new DivideOperator();
+    private final ModOperator mod = new ModOperator();
 
     @Override
     public int add(int num1, int num2) {
@@ -24,5 +25,10 @@ public class ArithmaticCalculator extends Calculator{
     @Override
     public int div(int num1, int num2) {
         return div.operator(num1, num2);
+    }
+
+    @Override
+    public int mod(int num1, int num2) {
+        return mod.operator(num1, num2);
     }
 }
