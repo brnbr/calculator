@@ -8,7 +8,7 @@ public class Calculator {
     int num1;
     int num2;
     int result;
-    char calSym;
+    char oper;
 
     public Calculator() {
     }
@@ -29,8 +29,12 @@ public class Calculator {
         return num2;
     }
 
-    public char getCalSym() {
-        return calSym;
+    public char getOper() {
+        return oper;
+    }
+
+    public void setOper(char oper) {
+        this.oper = oper;
     }
 
     //맨 앞 데이터 삭제
