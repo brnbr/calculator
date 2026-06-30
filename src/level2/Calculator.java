@@ -1,5 +1,6 @@
 package level2;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Calculator {
@@ -8,11 +9,16 @@ public class Calculator {
     int num1;
     int num2;
     char oper;
+    int radi;
 
     public Calculator(int num1, int num2, char oper) {
         this.num1 = num1;
         this.num2 = num2;
         this.oper = oper;
+    }
+
+    public Calculator(int num1) {
+        this.num1 = num1;
     }
 
     public ArrayList<Integer> getRes() {
@@ -31,6 +37,10 @@ public class Calculator {
         return num2;
     }
 
+    public int getRadi() {
+        return radi;
+    }
+
     public void setNum1(int num1) {
         this.num1 = num1;
     }
@@ -39,12 +49,20 @@ public class Calculator {
         this.num2 = num2;
     }
 
+    public void setRadi(int radi) {
+        this.radi = radi;
+    }
+
     public char getOper() {
         return oper;
     }
 
     public void setOper(char oper) {
         this.oper = oper;
+    }
+
+    public void excuteOper() throws IOException {
+
     }
 
     //맨 앞 데이터 삭제
