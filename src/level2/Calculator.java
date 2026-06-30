@@ -7,10 +7,12 @@ public class Calculator {
     static ArrayList<Integer> cir = new ArrayList<>();
     int num1;
     int num2;
-    int result;
     char oper;
 
-    public Calculator() {
+    public Calculator(int num1, int num2, char oper) {
+        this.num1 = num1;
+        this.num2 = num2;
+        this.oper = oper;
     }
 
     public ArrayList<Integer> getRes() {
@@ -29,6 +31,14 @@ public class Calculator {
         return num2;
     }
 
+    public void setNum1(int num1) {
+        this.num1 = num1;
+    }
+
+    public void setNum2(int num2) {
+        this.num2 = num2;
+    }
+
     public char getOper() {
         return oper;
     }
@@ -44,13 +54,7 @@ public class Calculator {
 
     //연산 결과 조회
     public void inquiryResults() {
-        if (!res.isEmpty()) {
-            System.out.println("사칙연산: " + res);
-        }
-
-        if (!cir.isEmpty()) {
-            System.out.println("원 넓이: " + cir);
-        }
+        System.out.println(this);
     }
 
     //계산

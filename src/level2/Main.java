@@ -24,17 +24,17 @@ public class Main {
                 int num2 = scan.nextInt();
 
                 System.out.print("사칙연산 기호를 입력하세요: ");
-                char calSym = scan.next().charAt(0);
+                char oper = scan.next().charAt(0);
 
-                if (calSym == '+') {
+                if (oper == '+') {
                     acal.adder(num1,num2);
-                } else if (calSym == '-') {
+                } else if (oper == '-') {
                     acal.sub(num1, num2);
-                } else if (calSym == '*') {
+                } else if (oper == '*') {
                     acal.mul(num1, num2);
-                } else if (calSym == '/') {
+                } else if (oper == '/') {
                     acal.div(num1, num2);
-                } else if (calSym == '%') {
+                } else if (oper == '%') {
                     acal.mod(num1, num2);
                 }else {
                     exc.exception();
