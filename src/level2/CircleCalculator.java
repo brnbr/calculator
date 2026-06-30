@@ -4,10 +4,13 @@ import java.util.ArrayList;
 
 public class CircleCalculator extends Calculator{
 
+    public CircleCalculator(int radi) {
+        super(radi);
+    }
+
     @Override
     public ArrayList<Integer> calculateCircleArea(int radi){
-        result = (int) (Math.pow(radi,2) * Math.PI);
-        cir.add(result);
+        cir.add((int) (Math.pow(radi,2) * Math.PI));
         return cir;
     }
 }
