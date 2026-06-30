@@ -61,9 +61,8 @@ public class Calculator {
         this.oper = oper;
     }
 
-    public void excuteOper() throws IOException {
-
-    }
+    //연산자에 따라 호출할 메서드 구분
+    public void excuteOper() throws IOException { }
 
     //맨 앞 데이터 삭제
     public void removeResult() {
