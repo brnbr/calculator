@@ -5,9 +5,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        ArithmaticCalculator acal = new ArithmaticCalculator();
-        CircleCalculator circle = new CircleCalculator();
-        Exception exc = new Exception();
+        CircleCalculator circle = null;
+        ArithmaticCalculator acal = null;
 
         Scanner scan = new Scanner(System.in);
 
@@ -26,26 +25,16 @@ public class Main {
                 System.out.print("사칙연산 기호를 입력하세요: ");
                 char oper = scan.next().charAt(0);
 
-                if (oper == '+') {
-                    acal.adder(num1,num2);
-                } else if (oper == '-') {
-                    acal.sub(num1, num2);
-                } else if (oper == '*') {
-                    acal.mul(num1, num2);
-                } else if (oper == '/') {
-                    acal.div(num1, num2);
-                } else if (oper == '%') {
-                    acal.mod(num1, num2);
-                }else {
-                    exc.exception();
-                }
+                acal = new ArithmaticCalculator(num1, num2, oper);
+                acal.excuteOper();
+
             } else if (choice == 2) {
                 //원의 넓이 계산
                 System.out.println("반지름을 입력하세요: ");
                 int radi = scan.nextInt();
+
+                circle = new CircleCalculator(radi);
                 circle.calculateCircleArea(radi);
-            } else {
-                exc.exception();
             }
 
             //결과 조회
